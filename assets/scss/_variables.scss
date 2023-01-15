@@ -1,0 +1,26 @@
+@font-face {
+    font-family: Outfit;
+    src: url(../fonts/Outfit-VariableFont_wght.ttf);
+}
+
+// FONTS
+
+$font-outfit: Outfit;
+
+// PRIMARY COLORS
+$color-primary-blue: hsl(215, 51%, 70%);
+$color-primary-cyan: hsl(178, 100%, 50%);
+
+// NEUTRAL COLORS
+
+$color-neutral-main-bg:  hsl(217, 54%, 11%);
+$color-neutral-card-bg: hsl(216, 50%, 16%);
+$color-neutral-line: hsl(215, 32%, 27%);
+$color-white: hsl(0, 0%, 100%);
+
+// MARGINS & BORDER RADIUS
+
+$margin-top-15px: 20px;
+
+$border-radius-13px: 13px;
+
