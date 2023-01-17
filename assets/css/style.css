@@ -107,6 +107,7 @@ hr {
 }
 .content__state-wrap .content__state-wrap__flex-ethereum {
   color: hsl(178deg, 100%, 50%);
+  font-weight: 600;
 }
 .content__state-wrap .content__state-wrap__flex-clock {
   color: hsl(215deg, 51%, 70%);
