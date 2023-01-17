@@ -22,8 +22,7 @@ main {
 }
 
 .content__equlibrium-name {
-  font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 0.875rem;
   color: hsl(0deg, 0%, 100%);
   text-decoration: none;
   margin-block: 20px;
