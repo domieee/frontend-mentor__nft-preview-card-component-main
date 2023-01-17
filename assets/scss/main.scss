@@ -34,6 +34,7 @@ main {
 
 .content__equlibrium-slogan {
     color: $color-primary-blue;
+    margin-top: $margin-top-15px;
     font-weight: 300;
     font-size: 1.125rem;
 }
@@ -44,13 +45,16 @@ hr {
 
 .content {
     background-color: $color-neutral-card-bg;
-    max-width: 320px;
+    max-width: 330px;
     width: 100%;
-    padding: 18px;
+    padding: 22px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border-radius: $border-radius-13px;
+    box-shadow: 10px 6px 77px -13px rgba(0, 0, 0, 0.73);
+    -webkit-box-shadow: 10px 6px 77px -13px rgba(0, 0, 0, 0.73);
+    -moz-box-shadow: 10px 6px 77px -13px rgba(0, 0, 0, 0.73);
 
     .content__img-container {
         margin-bottom: $margin-top-15px;
@@ -113,7 +117,7 @@ hr {
 
     .content__state-wrap__flex-clock {
         color: $color-primary-blue;
-         
+
         p {
             font-size: 0.9rem;
         }
