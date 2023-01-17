@@ -9,144 +9,140 @@
 body {
     font-family: Outfit, 'Roboto', sans-serif;
     background-color: $color-neutral-main-bg;
+}
 
-    main {
-        height: 100vh;
-        width: 100vw;
-        display: flex;
-        justify-content: center;
+main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content__equlibrium-name {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: $color-white;
+    text-decoration: none;
+    margin-block: $margin-top-15px;
+    transition: color 0.1s linear;
+
+    &:hover {
+        color: $color-primary-blue;
+    }
+}
+
+.content__equlibrium-slogan {
+    color: $color-primary-blue;
+    font-weight: 300;
+    font-size: 1.125rem;
+}
+
+hr {
+    color: $color-neutral-line;
+}
+
+.content {
+    background-color: $color-neutral-card-bg;
+    max-width: 320px;
+    width: 100%;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: $border-radius-13px;
+
+    .content__img-container {
+        margin-bottom: $margin-top-15px;
+        width: 100%;
+        display: grid;
+        justify-items: center;
         align-items: center;
+        border-radius: $border-radius-13px;
 
-
-        .content {
-            background-color: $color-neutral-card-bg;
-            max-width: 320px;
+        #content__img-container__equilibrium-image {
+            border-radius: 7px;
             width: 100%;
-            padding: 18px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            border-radius: $border-radius-13px;
+            grid-column-start: 1;
+            grid-row-start: 1;
+            transition: opacity 0.5s linear;
+        }
 
+        .img-view {
+            background-color: rgba($color: #fff, $alpha: 0.0);
+            border-radius: 8px;
+            width: 100%;
+            height: 100%;
+            grid-column-start: 1;
+            grid-row-start: 1;
+            opacity: 0;
+            transition: background-color 0.2s ease-in;
+            transition: opacity 0.2s ease-in;
 
-            .content__img-container {
-                background-color: white;
-                width: 100%;
-                display: grid;
-                justify-items: center;
-                align-items: center;
-                border-radius: $border-radius-13px;
-
-                &:hover {
-                    #content__img-container__equilibrium-image {
-                        opacity: 0.8;
-                    }
-
-                    #content__img-container__equilibrium-image-view {
-                        opacity: 1;
-                    }
-                }
-
-                #content__img-container__equilibrium-image {
-                    width: 100%;
-                    border-radius: 7px;
-                    transition: opacity 0.5s linear;
-
-                }
-
-                #content__img-container__equilibrium-image-view {
-                    width: 30%;
-                    opacity: 0;
-                    transition: opacity 0.5s linear;
-                }
+            &:hover {
+                background-image: url("../img/icon-view.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: rgba($color: #fff, $alpha: 0.1);
+                opacity: 1;
+                cursor: crosshair;
             }
+        }
+    }
+}
 
-            .content__img-container>* {
-                grid-column-start: 1;
-                grid-row-start: 1;
-            }
 
-            .content__equlibrium-name {
-                font-weight: 600;
-                font-size: 1.3rem;
-                color: $color-white;
-                text-decoration: none;
-                margin-block: $margin-top-15px;
-                transition: color 0.1s linear;
+.content__state-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-block: $margin-top-15px;
 
-                &:hover {
-                    color: $color-primary-blue;
-                }
+    .content__state-wrap__flex-ethereum,
+    .content__state-wrap__flex-clock {
+        display: flex;
+        block-size: fit-content;
 
-            }
+        img {
+            margin-right: 8px;
+        }
+    }
 
-            .content__equlibrium-slogan {
+    .content__state-wrap__flex-ethereum {
+        color: $color-primary-cyan;
+    }
+
+    .content__state-wrap__flex-clock {
+        color: $color-primary-blue;
+         
+        p {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+.content__footer {
+    display: flex;
+    align-items: center;
+    margin-top: $margin-top-15px;
+
+    img {
+        margin-right: 18px;
+        border-radius: 100%;
+        max-width: 32px;
+        border: 0.25px solid $color-white;
+    }
+
+    p {
+        font-weight: 300;
+        color: $color-primary-blue;
+
+        a {
+            color: $color-white;
+            text-decoration: none;
+            transition: color 0.2s linear;
+
+            &:hover {
                 color: $color-primary-blue;
-                font-weight: 300;
-                font-size: 1.125rem;
-            }
-
-
-            .content__state-wrap {
-                display: flex;
-                justify-content: space-between;
-                margin-block: $margin-top-15px;
-
-                .content__state-wrap__flex-ethereum,
-                .content__state-wrap__flex-clock {
-                    display: flex;
-                    block-size: fit-content;
-
-                    img {
-                        margin-right: 8px;
-                    }
-                }
-
-                .content__state-wrap__flex-ethereum {
-                    color: $color-primary-cyan;
-                }
-
-                .content__state-wrap__flex-clock {
-                    color: $color-primary-blue;
-
-                    p {
-                        font-size: 0.9rem;
-                    }
-                }
-            }
-
-            hr {
-                color: $color-neutral-line;
-            }
-
-            .content__footer {
-                display: flex;
-                align-items: center;
-                margin-top: $margin-top-15px;
-
-                img {
-                    margin-right: 18px;
-                    border-radius: 100%;
-                    max-width: 32px;
-                    border: 0.25px solid $color-white;
-                }
-
-                p {
-                    font-weight: 300;
-                    color: $color-primary-blue;
-
-                    a {
-                        color: $color-white;
-                        text-decoration: none;
-                        transition: color 0.2s linear;
-
-                        &:hover {
-                            color: $color-primary-blue;
-                        }
-                    }
-                }
-
-
             }
         }
     }

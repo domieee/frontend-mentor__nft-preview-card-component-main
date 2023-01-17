@@ -12,14 +12,38 @@ body {
   font-family: Outfit, "Roboto", sans-serif;
   background-color: hsl(217deg, 54%, 11%);
 }
-body main {
+
+main {
   height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body main .content {
+
+.content__equlibrium-name {
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: hsl(0deg, 0%, 100%);
+  text-decoration: none;
+  margin-block: 20px;
+  transition: color 0.1s linear;
+}
+.content__equlibrium-name:hover {
+  color: hsl(215deg, 51%, 70%);
+}
+
+.content__equlibrium-slogan {
+  color: hsl(215deg, 51%, 70%);
+  font-weight: 300;
+  font-size: 1.125rem;
+}
+
+hr {
+  color: hsl(215deg, 32%, 27%);
+}
+
+.content {
   background-color: hsl(216deg, 50%, 16%);
   max-width: 320px;
   width: 100%;
@@ -29,97 +53,86 @@ body main .content {
   justify-content: center;
   border-radius: 13px;
 }
-body main .content .content__img-container {
-  background-color: white;
+.content .content__img-container {
+  margin-bottom: 20px;
   width: 100%;
   display: grid;
   justify-items: center;
   align-items: center;
   border-radius: 13px;
 }
-body main .content .content__img-container:hover #content__img-container__equilibrium-image {
-  opacity: 0.8;
-}
-body main .content .content__img-container:hover #content__img-container__equilibrium-image-view {
-  opacity: 1;
-}
-body main .content .content__img-container #content__img-container__equilibrium-image {
-  width: 100%;
+.content .content__img-container #content__img-container__equilibrium-image {
   border-radius: 7px;
-  transition: opacity 0.5s linear;
-}
-body main .content .content__img-container #content__img-container__equilibrium-image-view {
-  width: 30%;
-  opacity: 0;
-  transition: opacity 0.5s linear;
-}
-body main .content .content__img-container > * {
+  width: 100%;
   grid-column-start: 1;
   grid-row-start: 1;
+  transition: opacity 0.5s linear;
 }
-body main .content .content__equlibrium-name {
-  font-weight: 600;
-  font-size: 1.3rem;
-  color: hsl(0deg, 0%, 100%);
-  text-decoration: none;
-  margin-block: 20px;
-  transition: color 0.1s linear;
+.content .content__img-container .img-view {
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  opacity: 0;
+  transition: background-color 0.2s ease-in;
+  transition: opacity 0.2s ease-in;
 }
-body main .content .content__equlibrium-name:hover {
-  color: hsl(215deg, 51%, 70%);
+.content .content__img-container .img-view:hover {
+  background-image: url("../img/icon-view.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  opacity: 1;
+  cursor: crosshair;
 }
-body main .content .content__equlibrium-slogan {
-  color: hsl(215deg, 51%, 70%);
-  font-weight: 300;
-  font-size: 1.125rem;
-}
-body main .content .content__state-wrap {
+
+.content__state-wrap {
   display: flex;
   justify-content: space-between;
   margin-block: 20px;
 }
-body main .content .content__state-wrap .content__state-wrap__flex-ethereum,
-body main .content .content__state-wrap .content__state-wrap__flex-clock {
+.content__state-wrap .content__state-wrap__flex-ethereum,
+.content__state-wrap .content__state-wrap__flex-clock {
   display: flex;
   block-size: fit-content;
 }
-body main .content .content__state-wrap .content__state-wrap__flex-ethereum img,
-body main .content .content__state-wrap .content__state-wrap__flex-clock img {
+.content__state-wrap .content__state-wrap__flex-ethereum img,
+.content__state-wrap .content__state-wrap__flex-clock img {
   margin-right: 8px;
 }
-body main .content .content__state-wrap .content__state-wrap__flex-ethereum {
+.content__state-wrap .content__state-wrap__flex-ethereum {
   color: hsl(178deg, 100%, 50%);
 }
-body main .content .content__state-wrap .content__state-wrap__flex-clock {
+.content__state-wrap .content__state-wrap__flex-clock {
   color: hsl(215deg, 51%, 70%);
 }
-body main .content .content__state-wrap .content__state-wrap__flex-clock p {
+.content__state-wrap .content__state-wrap__flex-clock p {
   font-size: 0.9rem;
 }
-body main .content hr {
-  color: hsl(215deg, 32%, 27%);
-}
-body main .content .content__footer {
+
+.content__footer {
   display: flex;
   align-items: center;
   margin-top: 20px;
 }
-body main .content .content__footer img {
+.content__footer img {
   margin-right: 18px;
   border-radius: 100%;
   max-width: 32px;
   border: 0.25px solid hsl(0deg, 0%, 100%);
 }
-body main .content .content__footer p {
+.content__footer p {
   font-weight: 300;
   color: hsl(215deg, 51%, 70%);
 }
-body main .content .content__footer p a {
+.content__footer p a {
   color: hsl(0deg, 0%, 100%);
   text-decoration: none;
   transition: color 0.2s linear;
 }
-body main .content .content__footer p a:hover {
+.content__footer p a:hover {
   color: hsl(215deg, 51%, 70%);
 }
 
